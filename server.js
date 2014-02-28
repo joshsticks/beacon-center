@@ -26,7 +26,7 @@ app.get('/', function(req, res){
   	var myCallback = function ( err, results ) {
 
   		console.log( results );
-  		res.render('index.jade', { pageTitle: 'My Site', data: results });
+  		res.render('index.jade', { pageTitle: 'Beacon Center', data: results });
   	}
 	mongo.Db.connect(mongoUri, function (err, db) {
   		db.collection('mydocs', function(er, collection) {
