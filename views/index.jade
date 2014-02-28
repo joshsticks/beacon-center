@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+  body
+    h1 Beacon Center
+    table(style="border: 1px solid black")
+      tr(style="border: 1px solid black")
+        th(style="border: 1px solid black") User Name
+        th(style="border: 1px solid black") Vip Flag
+      each item in data
+        tr(style="border: 1px solid black")
+          td(style="border: 1px solid black")= item.username
+          td(style="border: 1px solid black")= item.vipflag
