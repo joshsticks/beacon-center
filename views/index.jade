@@ -8,7 +8,9 @@ html(lang="en")
       tr(style="border: 1px solid black")
         th(style="border: 1px solid black") User Name
         th(style="border: 1px solid black") Vip Flag
+        th(style="border: 1px solid black") Timestamp
       each item in data
         tr(style="border: 1px solid black")
           td(style="border: 1px solid black")= item.username
           td(style="border: 1px solid black")= item.vipflag
+          td(style="border: 1px solid black")= item.timestamp

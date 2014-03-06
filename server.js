@@ -41,16 +41,17 @@ app.post('/update', function( req, res ) {
 	var body = '{"status":"success"}'
 	res.setHeader('Content-Type', 'application/json');
 	res.setHeader('Content-Length', body.length);
-	//console.log(JSON.parse(req.body));
+	//console.log(JSON.parse(req));
 	var mongo = require('mongodb');
 
 	var mongoUri = process.env.MONGOLAB_URI ||
   			  process.env.MONGOHQ_URL ||
   			  'mongodb://test:pancakes@ds033489.mongolab.com:33489/heroku_app22618166';
-
+  	var obj = JSON.parse(req.body);
+  	obj.timestamp = new Date().toString();
 	mongo.Db.connect(mongoUri, function (err, db) {
   		db.collection('mydocs', function(er, collection) {
-    			collection.insert(JSON.parse(req.body), {safe: true}, function(er,rs) {
+    			collection.insert(obj, {safe: true}, function(er,rs) {
     	
     			});
   		});
