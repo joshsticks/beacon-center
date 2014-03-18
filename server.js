@@ -25,7 +25,7 @@ app.get('/', function(req, res){
   			  'mongodb://test:pancakes@ds033489.mongolab.com:33489/heroku_app22618166';
   	var myCallback = function ( err, results ) {
 
-  		console.log( results );
+  		//console.log( results );
   		res.render('index.jade', { pageTitle: 'Beacon Center', data: results });
   	}
 	mongo.Db.connect(mongoUri, function (err, db) {
