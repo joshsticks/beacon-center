@@ -2,17 +2,18 @@ doctype html
 html(lang="en")
   head
     title= pageTitle
+    link(rel='stylesheet', href='css/main.css')
   body
     h1 Beacon Center
-    table(style="border: 1px solid blue")
-      tr(style="border: 1px solid blue")
-        th(style="border: 1px solid blue") User Name
-        th(style="border: 1px solid blue") Vip Flag
-        th(style="border: 1px solid blue") Identifier
-        th(style="border: 1px solid blue") Timestamp
+    table
+      tr
+        th User Name
+        th Vip Flag
+        th Identifier
+        th Timestamp
       each item in data
-        tr(style="border: 1px solid blue")
-          td(style="border: 1px solid blue")= item.username
-          td(style="border: 1px solid blue")= item.vipflag
-          td(style="border: 1px solid blue")= item.extGuid
-          td(style="border: 1px solid blue")= item.timestamp
+        tr
+          td= item.username
+          td= item.vipflag
+          td= item.extGuid
+          td= item.timestamp

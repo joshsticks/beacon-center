@@ -14,6 +14,8 @@ app.use (function(req, res, next) {
     });
 });
 
+app.use("/css", express.static(__dirname + '/css'));
+
 app.get('/', function(req, res){
 	//var body = 'Hello World';
 	//res.setHeader('Content-Type', 'text/plain');
